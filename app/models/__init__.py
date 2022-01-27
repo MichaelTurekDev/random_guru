@@ -10,7 +10,7 @@ from app import app
 
 model_path = Path().joinpath('app', 'models').resolve()
 ddl_path = model_path.joinpath('ddl.sql')
-db_path = model_path.joinpath(app.config["DB_NAME"])
+db_path = model_path.joinpath(f'{app.config["DB_NAME"]}.db')
 
 if not db_path.exists():
     # Initialize database

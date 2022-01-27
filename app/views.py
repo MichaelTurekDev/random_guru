@@ -65,6 +65,7 @@ def index() -> None:
     # Clear history once cycled through
     if len(history) == len(patterns):
         history_controller.clear()
+        history = []
 
     # Select random unvisited pattern and mark it visited in database
     unvisited = [p for p in patterns if p['name'] not in history]
